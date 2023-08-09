@@ -1,0 +1,27 @@
+ALGORITHM carte
+VAR
+    tab : ARRAY_OF INTEGER[N];
+   
+BEGIN
+
+   insertsort(tab)
+   
+END
+
+PROCEDURE insertsort(tab: ARRAY_OF integer)
+VAR
+   val,i,j:integer ;
+BEGIN
+    FOR i FROM 0 TO N STEP   DO
+        val:=tab[i]
+        j:=i-1
+        WHILE (j>=0 and tab[j]>val) DO
+            tab[j+1]:=tab[j]
+            j=j-1
+           
+        END_WHILE
+         tab[j+1]:=val
+    END_FOR
+END
+
+
